@@ -12,7 +12,7 @@ class PlayersController extends Controller
     public function show($id){
 
         $player = Player::find($id);
-        $team = Team::find($player->id);
+        $team = Team::find($player->team_id);
 
         return view('teams.player', compact('team', 'player'));
     }
